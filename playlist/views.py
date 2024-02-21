@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import Video
 
 
-
 def playlist(request):
     xxxx = Video.objects.all()
     return render(request, 'playlist/playlist.html', {
