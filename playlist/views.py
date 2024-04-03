@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Video
+from django.shortcuts import render, redirect
+from .models import Video 
+
 
 
 def playlist(request):
@@ -17,6 +18,7 @@ def create_video(request):
             title=title,
             embed_code=embed_code
         )
+        return redirect('playlist')
     
     return render(request, 'playlist/create_video.html',)
 

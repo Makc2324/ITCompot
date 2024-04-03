@@ -10,7 +10,11 @@
 <body data-bs-theme="dark">
     {% include "core/includes/header.html" %}
     <main>
-        <h1 class="text-center">Видео</h1>
+        <div class="d-flex justify-content-center align-items-center gap-3 my-3">
+            <h1>Видео</h1>
+            <a class="btn btn-primary " href="{% url 'create_video' %}">Добавить видео</a>
+        </div>
+
         <div class="justify-content-center d-flex gap-3">
             {% for video in videos %} 
                 <div class="card" style="width: 18rem;">
